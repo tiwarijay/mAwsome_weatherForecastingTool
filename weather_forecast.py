@@ -6,7 +6,6 @@
 # Importing the required libraries
 import requests
 import json
-import os
 
 
 # Let's define a class for your Weather Forecasting Tool and call it 'WeatherForecast'
@@ -25,7 +24,7 @@ class WeatherForecast:
         elif response.status_code == 404:
             error = "Error: City Not Found. Please enter a valid city."
         elif response.status_code == 401:
-            error = "Unauthorized."
+            error = "Unauthorized. Please check your API key in  config.json file or environment variable 'OPENWEATHER_API_KEY'."
         elif response.status_code == 403:
             error = "Forbidden."
         elif response.status_code == 400:
