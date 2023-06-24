@@ -21,7 +21,8 @@ class WeatherForecast:
 
         # Let's check the status code of the response, and print the appropriate message
         if response.status_code == 200:
-            print("Success!")
+            # print("Success!")
+            pass
         elif response.status_code == 404:
             print("Not Found.")
         elif response.status_code == 401:
@@ -47,7 +48,7 @@ class WeatherForecast:
         data = json.loads(response.text)
         # TODO: Parse the weather data and extract the required information
 
-        print('data:',data)
+        # print('data:',data)
 
         # Let's print the weather forecast for the city
         print(f"The weather forecast for {city} is: {data['weather'][0]['description']}")
