@@ -15,27 +15,27 @@ A command-line tool for retrieving the current weather forecast using the OpenWe
 ## Installation
 
 1. Clone the repository:
-'''
+```
 git clone https://github.com/Fastest-Coder-First/tiwariJay_weatherForecastingTool
-'''
+```
 
 2. Create a virtual environment:
-'''
-python3 -m venv venv
-'''
+```
+python3 -m venv myvenv
+```
 3. Activate the virtual environment:
 - For Windows:
   ```
-  venv\Scripts\activate
+  myvenv\Scripts\activate
   ```
 - For macOS/Linux:
   ```
-  source venv/bin/activate
+  source myvenv/bin/activate
   ```
 4. Install the required dependencies:
-'''
+```
 pip install -r requirements.txt
-'''
+```
 
 
 ## API Key Setup
@@ -50,21 +50,21 @@ To use the Weather Forecasting Tool, you need to obtain an API key from OpenWeat
     To set environment variables is by using the command line before running your Python script. The exact command varies depending on the operating system:
 
     ### Windows (Command Prompt):
-    '''
+    ```
     set OPENWEATHER_API_KEY=<your_api_key_without_quotes>
     python main.py
-    '''
+    ```
 
     ### Windows (PowerShell):
-    '''
+    ```
     $env:OPENWEATHER_API_KEY = "<your_api_key>"
     python main.py
-    '''
+    ```
 
     ### MacOS / Linux:
-    '''
+    ```
     OPENWEATHER_API_KEY="<your_api_key>" python main.py
-    '''
+    ```
 
 ## Usage
 
