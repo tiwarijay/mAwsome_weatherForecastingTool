@@ -21,47 +21,50 @@ class WeatherForecast:
 
         # Let's check the status code of the response, and print the appropriate message
         if response.status_code == 200:
-            # print("Success!")
-            pass
+            error = None
         elif response.status_code == 404:
-            print("Not Found.")
+            error = "Error: City Not Found. Please enter a valid city."
         elif response.status_code == 401:
-            print("Unauthorized.")
+            error = "Unauthorized."
         elif response.status_code == 403:
-            print("Forbidden.")
+            error = "Forbidden."
         elif response.status_code == 400:
-            print("Bad Request.")
+            error = "Bad Request."
         elif response.status_code == 500:
-            print("Internal Server Error.")
+            error = "Internal Server Error."
         elif response.status_code == 502:
-            print("Bad Gateway.")
+            error = "Bad Gateway."
         elif response.status_code == 503:
-            print("Service Unavailable.")
+            error = "Service Unavailable."
         elif response.status_code == 504:
-            print("Gateway Timeout.")
+            error = "Gateway Timeout."
         else:
-            print("Unknown Error.")
+            error = "Unknown Error."
 
 
+        if response.status_code == 200:
+            # Let's convert the response to JSON format
+            data = json.loads(response.text)
+            # TODO: Parse the weather data and extract the required information
 
-        # Let's convert the response to JSON format
-        data = json.loads(response.text)
-        # TODO: Parse the weather data and extract the required information
+            forecast = f"The weather forecast for {city} is: {data['weather'][0]['description']}\n" \
+            f"The temperature is: {data['main']['temp']}\n" \
+            f"The humidity is: {data['main']['humidity']}\n" \
+            f"The wind speed is: {data['wind']['speed']}\n" \
+            f"The cloudiness is: {data['clouds']['all']}\n" \
+            f"The pressure is: {data['main']['pressure']}\n" \
+            f"The sunrise is: {data['sys']['sunrise']}\n" \
+            f"The sunset is: {data['sys']['sunset']}\n" \
+            f"The visibility is: {data['visibility']}"
 
-        # print('data:',data)
+        else:
+            # Let's get the error message in the response
+            forecast = error
 
-        # Let's print the weather forecast for the city
-        print(f"The weather forecast for {city} is: {data['weather'][0]['description']}")
-        print(f"The temperature is: {data['main']['temp']}")
-        print(f"The humidity is: {data['main']['humidity']}")
-        print(f"The wind speed is: {data['wind']['speed']}")
-        print(f"The cloudiness is: {data['clouds']['all']}")
-        print(f"The pressure is: {data['main']['pressure']}")
-        print(f"The sunrise is: {data['sys']['sunrise']}")
-        print(f"The sunset is: {data['sys']['sunset']}")
-        print(f"The visibility is: {data['visibility']}")
-        # print(f"The timezone is: {data['timezone']}")
-        # print(f"The country is: {data['sys']['country']}")
+
+        # return the forecast
+        return forecast
+
     
 
 

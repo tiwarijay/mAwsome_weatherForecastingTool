@@ -29,4 +29,4 @@ if __name__ == "__main__":
     city_name = input("Enter the city name: ")
 
     # Call the get_forecast() method to retrieve the weather forecast
-    weather_tool.get_forecast(city=city_name)
+    print(weather_tool.get_forecast(city=city_name))
