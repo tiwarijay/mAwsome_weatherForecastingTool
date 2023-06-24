@@ -54,6 +54,7 @@ To use the Weather Forecasting Tool, you need to obtain an API key from OpenWeat
     set OPENWEATHER_API_KEY=<your_api_key_without_quotes>
     python main.py
     ```
+    [Note: No quotes or spaces around equal(=) sign.]
 
     ### Windows (PowerShell):
     ```
@@ -69,7 +70,7 @@ To use the Weather Forecasting Tool, you need to obtain an API key from OpenWeat
 ## Usage
 
 1. Ensure that you have activated the virtual environment (see Installation section above).
-2. Run the tool: `python weather_forecast.py`
+2. Run the tool: `python main.py`
 3. Enter the name of the city for which you want to retrieve the weather forecast when prompted.
 4. The tool will make a request to the OpenWeatherMap API and display the current weather forecast for the specified city.
 
