@@ -1,6 +1,6 @@
 # mAwsome: A Weather Forecasting CLI Tool
 
-mAwsome is a command-line tool for retrieving the current weather forecast using the OpenWeatherMap API.
+mAwsome is an awesome command-line tool for retrieving the current weather forecast using the OpenWeatherMap API.
 
 ## Features
 
