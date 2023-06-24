@@ -6,13 +6,14 @@ import unittest
 
 # import custom modules
 from weather_forecast import WeatherForecast
+from main import get_api_key
 
 # Let us make a class for testing
 class TestWeatherForecast(unittest.TestCase):
     
     def setUp(self):
-        # Reading the API key from the environment variable
-        self.my_api_key = os.environ.get('OPENWEATHER_API_KEY')
+        # get the API key using the helper function get_api_key()
+        self.my_api_key = get_api_key()
 
 
     # Test case for a valid city name
