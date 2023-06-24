@@ -54,7 +54,7 @@ class WeatherForecast:
             f"The pressure is: {data['main']['pressure']} hPa\n" \
             f"The sunrise is: {data['sys']['sunrise']} UTC\n" \
             f"The sunset is: {data['sys']['sunset']} UTC\n" \
-            f"The visibility is: {data['visibility']}\n"
+            f"The visibility is: {data['visibility']} meter\n"
 
         else:
             # Let's get the error message in the response
