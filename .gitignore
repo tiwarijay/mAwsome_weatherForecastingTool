@@ -1,0 +1,9 @@
+# config file for the app
+config.json
+
+# virtual environment folder
+venv_weather/
+
+# python cache folder
+__pycache__/
+
