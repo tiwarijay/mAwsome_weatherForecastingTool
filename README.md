@@ -74,6 +74,11 @@ To use the Weather Forecasting Tool, you need to obtain an API key from OpenWeat
 3. Enter the name of the city for which you want to retrieve the weather forecast when prompted.
 4. The tool will make a request to the OpenWeatherMap API and display the current weather forecast for the specified city.
 
+Following is the screenshot of the working product:
+
+![A screenshot of the tool in action!](assets/working_tool.png)
+
+
 ## Security Note
 
 Ensure that you keep your API key secure and avoid committing it to a public repository. You can use environment variables or configuration files to store and access the API key securely. See the 'API Key Setup' section above for more details.
