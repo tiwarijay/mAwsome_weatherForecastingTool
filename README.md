@@ -2,10 +2,52 @@
 
 mAwsome is an awesome command-line tool for retrieving the current weather forecast using the OpenWeatherMap API.
 
+## Table of Contents
+
+- [mAwsome: A Weather Forecasting CLI Tool](#mawsome-a-weather-forecasting-cli-tool)
+  - [Table of Contents](#table-of-contents)
+  - [Features](#features)
+  - [Snapshot](#snapshot)
+  - [Architecture Diagram](#architecture-diagram)
+  - [Requirements](#requirements)
+  - [Installation](#installation)
+  - [API Key Setup](#api-key-setup)
+  - [Usage](#usage)
+  - [Security Note](#security-note)
+  - [Usage of Github Copilot in this project](#usage-of-github-copilot-in-this-project)
+    - [Code Generation and Completion:](#code-generation-and-completion)
+    - [Documentation assistance:](#documentation-assistance)
+    - [Time/effort savings and Overall Experience:](#timeeffort-savings-and-overall-experience)
+
+
 ## Features
 
 - Retrieves the current weather forecast for a given city
 - Displays relevant weather information such as temperature, humidity, and weather conditions
+
+## Snapshot
+Following is the screenshot of the working product:
+
+![A screenshot of the tool in action!](assets/working_tool.png)
+
+## Architecture Diagram 
+Following is the architecture diagram of the tool:
+
+Weather Forecasting Tool Architecture Diagram:
+
+```
+[Command-Line Interface] --> [API Communication Module] --> [Data Parsing Module] --> [Display Weather Forecast]
+```                            
+
+- Command-Line Interface: The user interacts with the tool through the command line. It accepts user input for the city name and displays the weather forecast.
+
+- API Communication Module: Handles the communication with the OpenWeatherMap API. It sends requests to retrieve weather data for the specified city and receives the response.
+
+- Data Parsing Module: Parses the received weather data from the API response. It extracts relevant information such as temperature, humidity, and weather conditions.
+
+The Command-Line Interface interacts with the API Communication Module to request weather data for a specific city. The API Communication Module communicates with the OpenWeatherMap API and receives the weather data. This data is then passed to the Data Parsing Module, which extracts the required information. 
+
+
 
 ## Requirements
 
@@ -74,14 +116,26 @@ To use the Weather Forecasting Tool, you need to obtain an API key from OpenWeat
 3. Enter the name of the city for which you want to retrieve the weather forecast when prompted.
 4. The tool will make a request to the OpenWeatherMap API and display the current weather forecast for the specified city.
 
-Following is the screenshot of the working product:
-
-![A screenshot of the tool in action!](assets/working_tool.png)
-
 
 ## Security Note
 
 Ensure that you keep your API key secure and avoid committing it to a public repository. You can use environment variables or configuration files to store and access the API key securely. See the 'API Key Setup' section above for more details.
+
+## Usage of Github Copilot in this project
+
+### Code Generation and Completion: 
+[ I consider my self as a beginner in app development and following is my experiece with Github Copilot for creating this CLI tool. ]
+
+- Github Copilot immensely helpepd in generating the code for this project. 
+- Starting from importing required libraries to making class `WeatherForecast()`, function `get_forecast()`. It even handled the API communication module, data parsing, and errr handling. Awesome! I just had to give prompts in the form of comments and Github Copilot generated the code for me. I just had to do `Tab/Ctrl+RightArroww` + `Enter` for most of the part. I just had to think about the overall structure of the tool, and copilot took care of the syntactical details.
+
+### Documentation assistance:
+- The biggest relief was the assistance in creating the gigantic README file. As soon as I started writing the headers, it started the contect accurately for most of the part.  
+
+### Time/effort savings and Overall Experience:
+- Although I had no experience with CLI tool development and very minimial experience with git and GitHub, I was able to create a working MVP in less that 3-4 hours, with the help of Chat GPT and Github Copilot. I am not sure how much time I would have taken otherwise, if I had to write the code from scratch. May be a day, or a week, god knows. 
+
+- This is a game changer!
 
 
 
