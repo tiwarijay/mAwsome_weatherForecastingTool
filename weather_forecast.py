@@ -15,8 +15,8 @@ class WeatherForecast:
         self.api_key = api_key
 
     # Let's define a method to get the weather forecast for a city
-    def get_forecast(self, city):
-        url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={self.api_key}"
+    def get_forecast(self, city, units='metric'):
+        url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&units={units}&appid={self.api_key}"
         response = requests.get(url)
 
         # Let's check the status code of the response, and print the appropriate message
@@ -47,15 +47,15 @@ class WeatherForecast:
             data = json.loads(response.text)
             # TODO: Parse the weather data and extract the required information
 
-            forecast = f"The weather forecast for {city} is: {data['weather'][0]['description']}\n" \
-            f"The temperature is: {data['main']['temp']}\n" \
-            f"The humidity is: {data['main']['humidity']}\n" \
+            forecast = f"The weather forecast for {city} can be summarized as: {data['weather'][0]['description']}\n" \
+            f"The temperature is: {data['main']['temp']} °C\n" \
+            f"The humidity is: {data['main']['humidity']}%\n" \
             f"The wind speed is: {data['wind']['speed']}\n" \
-            f"The cloudiness is: {data['clouds']['all']}\n" \
-            f"The pressure is: {data['main']['pressure']}\n" \
-            f"The sunrise is: {data['sys']['sunrise']}\n" \
-            f"The sunset is: {data['sys']['sunset']}\n" \
-            f"The visibility is: {data['visibility']}"
+            f"The cloudiness is: {data['clouds']['all']}%\n" \
+            f"The pressure is: {data['main']['pressure']} hPa\n" \
+            f"The sunrise is: {data['sys']['sunrise']} UTC\n" \
+            f"The sunset is: {data['sys']['sunset']} UTC\n" \
+            f"The visibility is: {data['visibility']}%\n"
 
         else:
             # Let's get the error message in the response
