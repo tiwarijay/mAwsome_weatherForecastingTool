@@ -15,6 +15,10 @@ class WeatherForecast:
 
     # Let's define a method to get the weather forecast for a city
     def get_forecast(self, city, units='metric'):
+        # Let's check if the city name is valid
+        if not city.isalpha():
+            return "Error: City Not Found. Please enter a valid city."
+        
         url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&units={units}&appid={self.api_key}"
         response = requests.get(url)
 
