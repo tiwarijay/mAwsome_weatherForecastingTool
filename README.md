@@ -1,6 +1,6 @@
-# Weather Forecasting Tool
+# mAwsome: A Weather Forecasting CLI Tool
 
-A command-line tool for retrieving the current weather forecast using the OpenWeatherMap API.
+mAwsome is a command-line tool for retrieving the current weather forecast using the OpenWeatherMap API.
 
 ## Features
 
@@ -9,7 +9,7 @@ A command-line tool for retrieving the current weather forecast using the OpenWe
 
 ## Requirements
 
-- Python 3.6 or above
+- Python 3.9 or above
 - OpenWeatherMap API key (see 'API Key Setup' below)
 
 ## Installation
