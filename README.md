@@ -87,7 +87,16 @@ To use the Weather Forecasting Tool, you need to obtain an API key from OpenWeat
 1. Go to the OpenWeatherMap website: [https://openweathermap.org/](https://openweathermap.org/).
 2. Sign up for a free account or log in if you already have one.
 3. Navigate to the API keys section and generate a new API key.
-4. Copy the API key and store it securely. Avoid hard-coding api key in the code. Please set an environment variable as shown below:
+4. Copy the API key and store it securely. Avoid hard-coding api key in the code. You can set upy API key in folowing two ways:
+   1. Using config.json, if it is present in the root directory of the project. The config.json file should have the following structure:
+      ```
+      {
+        "OPENWEATHER_API_KEY": "<your_api_key>"
+      }
+      ```
+      You can set you API key in the config.json file and the tool will automatically pick it up.
+
+   2. By setting an environment variable as shown below:
 
     To set environment variables is by using the command line before running your Python script. The exact command varies depending on the operating system:
 
