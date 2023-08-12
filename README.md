@@ -14,10 +14,6 @@ mAwsome is an awesome command-line tool for retrieving the current weather forec
   - [API Key Setup](#api-key-setup)
   - [Usage](#usage)
   - [Security Note](#security-note)
-  - [Usage of Github Copilot in this project](#usage-of-github-copilot-in-this-project)
-    - [Code Generation and Completion:](#code-generation-and-completion)
-    - [Documentation assistance:](#documentation-assistance)
-    - [Time/effort savings and Overall Experience:](#timeeffort-savings-and-overall-experience)
 
 
 ## Features
@@ -130,7 +126,7 @@ To use the Weather Forecasting Tool, you need to obtain an API key from OpenWeat
 
 Ensure that you keep your API key secure and avoid committing it to a public repository. You can use environment variables or configuration files to store and access the API key securely. See the 'API Key Setup' section above for more details.
 
-## Usage of Github Copilot in this project
+<!-- ## Usage of Github Copilot in this project
 
 ### Code Generation and Completion: 
 [ I consider my self as a beginner in app development and following is my experiece with Github Copilot for creating this CLI tool. ]
@@ -144,7 +140,7 @@ Ensure that you keep your API key secure and avoid committing it to a public rep
 ### Time/effort savings and Overall Experience:
 - Although I had no experience with CLI tool development and very minimial experience with git and GitHub, I was able to create a working MVP in less that 3-4 hours, with the help of Chat GPT and Github Copilot. I am not sure how much time I would have taken otherwise, if I had to write the code from scratch. May be a day, or a week, god knows. 
 
-- This is a game changer!
+- This is a game changer! -->
 
 
 
